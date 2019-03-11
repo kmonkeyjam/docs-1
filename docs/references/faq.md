@@ -43,3 +43,7 @@ To add a LICENSE to your application:
 * Commit and push the LICENSE back upstream to Transposit
 
 Henceforth, all forks of your application will include your LICENSE file.
+
+## Hosted apps require third-party cookies
+
+To use a hosted app, you must enable third-party cookies in your browser. Third-party cookies are enabled by default in Chrome, Firefox and Edge. Third-party cookies are disabled by default in Safari. To enable third-party cookies in Safari, navigate to **Preferences** > **Privacy** and uncheck **Prevent cross-site tracking**.
