@@ -5,7 +5,7 @@ title: Terms & basics
 
 ## Applications
 
-An application is the representation of a particular project; a container functionality you want to build. Applications contain operations, data connections, keys to access data connections, and configurations for authentication and deployment.
+An application is the representation of a particular project; a container for functionality you want to build. Applications contain operations, data connections, keys to access data connections, and configurations for authentication and deployment.
 
 ## Data connections
 
