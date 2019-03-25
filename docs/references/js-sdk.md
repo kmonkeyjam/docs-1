@@ -11,16 +11,17 @@ Your web app can be available to the public or protected by Google sign-in. Web 
 
 ### Enable user sign-in
 
-1. Navigate to **Authentication**>**User Sign-in**
+1. Navigate to **Authentication** > **User Sign-in**
 2. Check **Require users to register and sign in with Google**
-3. Specify **Successful sign-in URIs**. Transposit only allows redirection to these URIs to complete sign-in. This list can be empty if you are only using [hosted apps](/building/hosted-apps)
+3. Specify **Successful sign-in URIs**.
+Transposit only allows redirection to these URIs during sign-in. This list should be empty if you are only using [hosted apps](/building/hosted-apps).
 4. Ensure a **Google Client ID** and **Google Client Secret** are present
 5. Save the configuration
-6. Choose to **Allow sign in from any Google account** or choose to **Restrict to specific whitelisted domains and users**
+6. Optionally, choose to **Restrict to specific whitelisted domains and users**
 
 ### Disable user sign-in
 
-1. Navigate to **Authentication**>**User Sign-in**
+1. Navigate to **Authentication** > **User Sign-in**
 2. Uncheck **Require users to register and sign in with Google**
 
 ## Deploy endpoints
