@@ -3,180 +3,49 @@ id: js-sdk
 title: JavaScript SDK
 ---
 
-The Transposit JavaScript SDK makes it simple to deal with sign-in, authentication, and running operations in your application. See also: [building with the JavaScript SDK](/building/js-sdk).
+Use the Transposit JavaScript SDK to call operations from a web app.
 
-## Handle login
+## Configure user sign-in
 
-`transposit.handleLogin([callback])`
+Your web app can be available to the public or protected by Google sign-in. Web apps protected by sign-in can allow access only to certain email addresses or email domains.
 
-Reads login information from the url and stores the claims object in localStorage for use in subsequent api calls. This is used after google login redirect. This function redirects the user to authenticate if they are missing credentials.
+### Enable user sign-in
 
-If a callback is provided, it will be called after successful login.
+1. Navigate to **Authentication**>**User Sign-in**
+2. Check **Require users to register and sign in with Google**
+3. Specify **Successful sign-in URIs**. Transposit only allows redirection to these URIs to complete sign-in. This list can be empty if you are only using [hosted apps](/building/hosted-apps)
+4. Ensure a **Google Client ID** and **Google Client Secret** are present
+5. Save the configuration
+6. Choose to **Allow sign in from any Google account** or choose to **Restrict to specific whitelisted domains and users**
 
-**Returns** void
+### Disable user sign-in
 
-**Example**
+1. Navigate to **Authentication**>**User Sign-in**
+2. Uncheck **Require users to register and sign in with Google**
 
-```javascript
-// call this when your handle-redirect page loads
-try {
-  transposit.handleLogin(({ needsKeys }) => {
-    if (needsKeys === true) {
-      // user has not yet provided all credentials
-    }
-  });
-} catch (err) {
-  // do nothing if this page is viewable when you are not logging in
-}
-```
+## Deploy endpoints
 
-## Check if logged in
+Deploy the operations you want to call from your web app as endpoints.
 
-`transposit.isLoggedIn()`
+### Public endpoints
 
-**Returns** (boolean): True if there exists login information (does not check if the token is expired).
+If your app is available to the public, deploy your endpoints without authentication.
 
+1. Navigate to **Deploy** > **Endpoints**
+2. Find the operation you want to deploy
+3. Choose **Deployed** from the dropdown menu
+4. Save your changes
 
-## Log out
+### Signed-in user endpoints
 
-`transposit.logOut()`
+If your app is protected by Google sign-in, deploy your endpoints with user sign-in required.
 
-Invalidates stored claims and clears them from localStorage.
+1. Navigate to **Deploy** > **Endpoints**
+2. Find the operation you want to deploy
+3. Choose **Deployed** from the dropdown menu
+4. Check only **Require user sign-in**
+5. Save your changes
 
-**Returns**: Promise&lt;void&gt;
+## Read the SDK documentation
 
-## Run operation
-
-`transposit.runOperation(operation, [params={}])`
-
-Runs an operation.
-
-| Argument    | Type   |                                                       |
-| :---------- | :----- | :---------------------------------------------------- |
-| operation   | String | the name of the operation to be run                   |
-| [params={}] | Object | an object containing any operation-defined parameters |
-
-**Returns** (EndRequestLog): Returns the operation results and metadata about that result
-
-**Example**
-
-```javascript
-transposit.runOperation("this.helloworld");
-// => { status: "SUCCESS", result: { results: [{"Hello": "World"}] } }
-
-transposit.runOperation("source.users", { id: params.userId });
-// => { status: "ERROR", result: { exceptionLog: { message: "Failed to find user 123" } } }
-```
-
-## Get connect location
-
-`transposit.getConnectLocation([redirectUri=window.location.href])`
-
-| Argument                           | Type   |                                                       |
-| :--------------------------------- | :----- | :---------------------------------------------------- |
-| [redirectUri=window.location.href] | String | an optional param to specify an alternate redirectUri |
-
-**Returns** (String): A url to redirect to for user authorization.
-
-**Example**
-
-```javascript
-transposit.getConnectLocation("localhost");
-// => "https://api.transposit.com/app/v1/gardener/hose/connect?redirectUri=localhost"
-```
-
-## Get Google login location
-
-`transposit.getGoogleLoginLocation([redirectUri=window.location.href])`
-
-Runs an operation.
-
-| Argument                           | Type   |                                                       |
-| :--------------------------------- | :----- | :---------------------------------------------------- |
-| [redirectUri=window.location.href] | String | an optional param to specify an alternate redirectUri |
-
-**Returns** (String): A url to redirect to for google login.
-
-**Example**
-
-```javascript
-transposit.getConnectLocation("localhost");
-// => "https://api.transposit.com/app/v1/gardener/hose/login/google?redirectUri=localhost"
-```
-
-## Get user name
-
-`transposit.getUserName()`
-
-Returns the full name of the logged-in user.
-
-**Returns** (String): The full name of the logged-in user
-
-**Example**
-
-```javascript
-transposit.getUserName();
-// => "Pat Jones"
-```
-
-## Get user email
-
-`transposit.getUserEmail()`
-
-Returns the email address of the signed-in user.
-
-**Returns** (String): The email address of the signed-in user
-
-**Example**
-
-```javascript
-transposit.getUserEmail();
-// => "patjones@gmail.com"
-```
-
-## EndRequestLog format
-
-The full format of the return object for `transposit.runOperation`
-
-```javascript
-export interface EndRequestLog {
-  status: "SUCCESS" | "ERROR";
-  requestId: string;
-  timestamp: string;
-  serviceName: string;
-  serviceMaintainer: string;
-  operationId: string;
-  resultActionId?: string;
-  result: EndRequestLogResult;
-}
-
-export interface EndRequestLogResult {
-  results?: any[];
-  exceptionLog?: ExceptionLog;
-}
-
-export interface ExceptionLog {
-  message?: string;
-  stackTrace?: string;
-  exceptionClass?: string;
-  details?: ExceptionLogDetails;
-}
-
-export interface ExceptionLogDetails {
-  httpLog?: HttpLog;
-  scriptExceptionLog?: ScriptExceptionLog;
-  type: "HTTP" | "SCRIPTEXCEPTION" | "DETAILSNOTSET";
-}
-
-export interface HttpLog {
-  uri: string;
-  statusCode: number;
-  response?: string;
-  curlCommand?: string;
-}
-
-export interface ScriptExceptionLog {
-  line: number;
-  column?: number;
-}
-```
+Once you have configured user sign-in and deployed endpoints, use the SDK to build your web app. Follow our [SDK documentation on GitHub](https://github.com/transposit/transposit-js-sdk).
