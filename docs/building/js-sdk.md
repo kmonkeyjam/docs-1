@@ -3,15 +3,15 @@ id: js-sdk
 title: JavaScript SDK
 ---
 
-Use the Transposit JavaScript SDK to call operations from a web app.
+Use the [Transposit JavaScript SDK](https://github.com/transposit/transposit-js-sdk) to call operations from a web app.
 
 ## Configure user sign-in
 
-Your web app can be available to the public or protected by Google sign-in. Web apps protected by sign-in can allow access only to certain email addresses or email domains.
+Your web app can be shared publicly or protected by sign-in. Web apps protected by sign-in can whitelist specific Google GSuite domains or specific users.
 
 ### Enable user sign-in
 
-1. Navigate to **Authentication** > **User Sign-in**
+1. Navigate to **Authentication &gt; User Sign-in**.
 2. Check **Require users to register and sign in with Google**
 3. Specify **Successful sign-in URIs**.
 Transposit only allows redirection to these URIs during sign-in. This list should be empty if you are only using [hosted apps](/building/hosted-apps).
@@ -21,7 +21,7 @@ Transposit only allows redirection to these URIs during sign-in. This list shoul
 
 ### Disable user sign-in
 
-1. Navigate to **Authentication** > **User Sign-in**
+1. Navigate to **Authentication &gt; User Sign-in**
 2. Uncheck **Require users to register and sign in with Google**
 
 ## Deploy endpoints
@@ -30,18 +30,18 @@ Deploy the operations you want to call from your web app as endpoints.
 
 ### Public endpoints
 
-If your app is available to the public, deploy your endpoints without authentication.
+If your app is shared publicly, deploy your endpoints without authentication.
 
-1. Navigate to **Deploy** > **Endpoints**
+1. Navigate to **Deploy &gt; Endpoints**
 2. Find the operation you want to deploy
 3. Choose **Deployed** from the dropdown menu
 4. Save your changes
 
 ### Signed-in user endpoints
 
-If your app is protected by Google sign-in, deploy your endpoints with user sign-in required.
+If your app is protected by sign-in, deploy your endpoints with user sign-in required.
 
-1. Navigate to **Deploy** > **Endpoints**
+1. Navigate to **Deploy &gt; Endpoints**
 2. Find the operation you want to deploy
 3. Choose **Deployed** from the dropdown menu
 4. Check only **Require user sign-in**
