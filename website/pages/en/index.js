@@ -146,7 +146,7 @@ class Index extends React.Component {
       <Block layout="fourColumn">
         {[
           {
-            content: 'Start with an <a href="/introduction">introduction to Transposit</a>, get building right away with a <a href="/get-started/quickstart">quickstart guide</a>, read about <a href="/building/operations">JavaScript and SQL operations</a> and the power of <a href="/building/managed-authentication">managed authentcation</a>.',
+            content: 'Start with an <a href="/introduction">introduction to Transposit</a>, get building right away with a <a href="/get-started/quickstart">quickstart guide</a>, read about <a href="/building/operations">JavaScript and SQL operations</a> and the power of <a href="/building/managed-authentication">managed authentication</a>.',
             
             title: 'How to use these docs',
           },

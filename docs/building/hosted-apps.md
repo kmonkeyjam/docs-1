@@ -22,13 +22,7 @@ Click **Preview** to preview uncommitted page changes in your browser. You will 
 
 A preview of your hosted app interacts with committed operations; you must commit changes to operation code before these changes will be reflected in a preview. A preview obeys the same configuration as your deployment, so if your hosted app has sign-in enabled, you will need to sign in to interact with the preview.
 
-A preview is not accessible to others and only exists for one minute. After one minute, loading a preview will merely load the committed page.
-
-You can access previews at:
-
-```text
-https://api.transposit.com/app/{maintainer}/{applicationName}/preview
-```
+A preview only exists for one minute.
 
 ### Deployment process
 
@@ -36,11 +30,7 @@ Click **Commit code** to persist your changes and deploy them. A hosted app alwa
 
 Sign-in and authentication for data connections can be configured under **Authentication**.
 
-Your hosted app can be accessed at:
-
-```text
-https://console.transposit.com/app/{maintainer}/{applicationName}
-```
+A link to your hosted app is available under **Deploy &gt; Hosted Page**.
 
 ## Configure sign-in
 

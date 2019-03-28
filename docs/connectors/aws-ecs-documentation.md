@@ -76,11 +76,11 @@ The number of instantiations of the specified task definition to place and keep 
 
 Specifies whether to enable Amazon ECS managed tags for the tasks within the service. For more information, see Tagging Your Amazon ECS Resources in the Amazon Elastic Container Service Developer Guide. 
 
-**Type:** OBJECT
+**Type:** BOOLEAN
 
 #### healthCheckGracePeriodSeconds
 
-The period of time, in seconds, that the Amazon ECS service scheduler should ignore unhealthy Elastic Load Balancing target health checks after a task has first started. This is only valid if your service is configured to use a load balancer. If your service's tasks take a while to start and respond to Elastic Load Balancing health checks, you can specify a health check grace period of up to 7,200 seconds. During that time, the ECS service scheduler ignores health check status. This grace period can prevent the ECS service scheduler from marking tasks as unhealthy and stopping them before they have time to come up. 
+The period of time, in seconds, that the Amazon ECS service scheduler should ignore unhealthy Elastic Load Balancing target health checks after a task has first started. This is only valid if your service is configured to use a load balancer. If your service's tasks take a while to start and respond to Elastic Load Balancing health checks, you can specify a health check grace period of up to 2,147,483,647 seconds. During that time, the ECS service scheduler ignores health check status. This grace period can prevent the ECS service scheduler from marking tasks as unhealthy and stopping them before they have time to come up. 
 
 **Type:** INTEGER
 
@@ -228,7 +228,7 @@ The short name or full Amazon Resource Name (ARN) of the cluster that hosts the 
 
 If true, allows you to delete a service even if it has not been scaled down to zero tasks. It is only necessary to use this if the service is using the REPLICA scheduling strategy. 
 
-**Type:** OBJECT
+**Type:** BOOLEAN
 
 </details>
 
@@ -254,7 +254,7 @@ The short name or full Amazon Resource Name (ARN) of the cluster that hosts the 
 
 Forces the deregistration of the container instance. If you have tasks running on the container instance when you deregister it with the force option, these tasks remain running until you terminate the instance or the tasks stop through some other means, but they are orphaned (no longer monitored or accounted for by Amazon ECS). If an orphaned task on your container instance is part of an Amazon ECS service, then the service scheduler starts another copy of that task, on a different container instance if possible.  Any containers in orphaned service tasks that are registered with a Classic Load Balancer or an Application Load Balancer target group are deregistered. They begin connection draining according to the settings on the load balancer or target group. 
 
-**Type:** OBJECT
+**Type:** BOOLEAN
 
 </details>
 
@@ -420,7 +420,7 @@ Lists the account settings for an Amazon ECS resource for a specified principal.
 
 Specifies whether to return the effective settings. If true, the account settings for the root user or the default setting for the principalArn. If false, the account settings for the principalArn are returned if they are set. Otherwise, no account settings are returned. 
 
-**Type:** OBJECT
+**Type:** BOOLEAN
 
 #### maxResults
 
@@ -944,7 +944,7 @@ The number of instantiations of the specified task to place on your cluster. You
 
 Specifies whether to enable Amazon ECS managed tags for the task. For more information, see Tagging Your Amazon ECS Resources in the Amazon Elastic Container Service Developer Guide. 
 
-**Type:** OBJECT
+**Type:** BOOLEAN
 
 #### group
 
@@ -1036,7 +1036,7 @@ The short name or full Amazon Resource Name (ARN) of the cluster on which to sta
 
 Specifies whether to enable Amazon ECS managed tags for the task. For more information, see Tagging Your Amazon ECS Resources in the Amazon Elastic Container Service Developer Guide. 
 
-**Type:** OBJECT
+**Type:** BOOLEAN
 
 #### group
 
@@ -1334,7 +1334,7 @@ The number of instantiations of the task to place and keep running in your servi
 
 Whether to force a new deployment of the service. Deployments are not forced by default. You can use this option to trigger a new deployment with no service definition changes. For example, you can update a service's tasks to use a newer Docker image with the same image/tag combination (my_image:latest) or to roll Fargate tasks onto a newer platform version. 
 
-**Type:** OBJECT
+**Type:** BOOLEAN
 
 #### healthCheckGracePeriodSeconds
 

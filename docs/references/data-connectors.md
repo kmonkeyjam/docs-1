@@ -13,7 +13,6 @@ Note: reference material for each data connector can additionally be viewed in t
 * [Airtable](../connectors/airtable-documentation.md)
 * [Apify Crawler](../connectors/apify-crawler-documentation.md)
 * [AWS Athena](../connectors/aws-athena-documentation.md)
-* [AWS Basic](../connectors/aws-basic-documentation.md)
 * [AWS Cloudwatch Events](../connectors/aws-cloudwatch-events-documentation.md)
 * [AWS Cloudwatch Logs](../connectors/aws-cloudwatch-logs-documentation.md)
 * [AWS DynamoDB](../connectors/aws-dynamodb-documentation.md)
@@ -56,6 +55,10 @@ Note: reference material for each data connector can additionally be viewed in t
 * [Google Mail](../connectors/google-mail-documentation.md)
 * [Google Photos](../connectors/google-photos-documentation.md)
 * [Google Sheets](../connectors/google-sheets-documentation.md)
+
+## H
+
+* [Hubspot](../connectors/hubspot-documentation.md)
 
 ## J
 

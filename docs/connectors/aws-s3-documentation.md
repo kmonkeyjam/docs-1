@@ -429,6 +429,68 @@ Allows grantee to write the ACL for the applicable object.
 
 </details>
 
+## create_bucket_in_region
+
+
+
+<details><summary>Parameters</summary>
+
+#### Bucket (required)
+
+Name of bucket to create.
+
+**Type:** STRING
+
+#### Region (required)
+
+Region in which to create bucket. This must match the region specified in the connector configuration.
+
+**Type:** STRING
+
+#### x-amz-acl
+
+The canned ACL to apply to the object.
+
+**Type:** STRING
+
+#### x-amz-bucket-object-lock-enabled
+
+Specifies whether you want S3 Object Lock to be enabled for the new bucket.
+
+**Type:** STRING
+
+#### x-amz-grant-full-control
+
+Gives the grantee READ, READ_ACP, and WRITE_ACP permissions on the object.
+
+**Type:** STRING
+
+#### x-amz-grant-read
+
+Allows grantee to read the object data and its metadata.
+
+**Type:** STRING
+
+#### x-amz-grant-read-acp
+
+Allows grantee to read the object ACL.
+
+**Type:** STRING
+
+#### x-amz-grant-write
+
+Allows grantee to create, overwrite, and delete any object in the bucket.
+
+**Type:** STRING
+
+#### x-amz-grant-write-acp
+
+Allows grantee to write the ACL for the applicable object.
+
+**Type:** STRING
+
+</details>
+
 ## delete_bucket
 
 
