@@ -47,6 +47,7 @@
       "connectors/aws-ec2-documentation",
       "connectors/aws-ecs-documentation",
       "connectors/aws-kinesis-documentation",
+      "connectors/aws-kinesis-firehose-documentation",
       "connectors/aws-lambda-documentation",
       "connectors/aws-s3-documentation",
       "connectors/aws-ses-documentation",

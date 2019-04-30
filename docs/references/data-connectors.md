@@ -21,6 +21,7 @@ Note: reference material for each data connector can additionally be viewed in t
 * [AWS EC2](../connectors/aws-ec2-documentation.md)
 * [AWS ECS](../connectors/aws-ecs-documentation.md)
 * [AWS Kinesis](../connectors/aws-kinesis-documentation.md)
+* [AWS Kinesis Firehose](../connectors/aws-kinesis-firehose-documentation.md)
 * [AWS Lambda](../connectors/aws-lambda-documentation.md)
 * [AWS S3](../connectors/aws-s3-documentation.md)
 * [AWS SES](../connectors/aws-ses-documentation.md)
