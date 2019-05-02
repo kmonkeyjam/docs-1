@@ -127,8 +127,18 @@ clearImmediate(setImmediateUuid);
 ```
 
 ## Gotchas
-- The timing semantics of these functions do not exactly match the timing semantics of a conventional JavaScript event loop, like one in the browser.
-- Timing is not exact; e.g. `setTimeout(function, 1000)` is not guaranteed to execute exactly 1000ms later in terms of wall-clock time.
+- The timing semantics of these functions do not exactly match the timing semantics of a conventional JavaScript event loop, like one in the browser. Consider the following JavaScript code:
+    ```javascript
+    api.log("A");
+    setImmediate(() => {
+        api.log("B");
+    });
+    // do arbitrary stuff
+    api.log("C");
+    ```
+    When this code executes inside of a browser, the ordering is expected to deterministically be `A, C, B`.
+    When this code executes inside of a Transposit operation, the ordering will likely be `A, C, B` but it may also be `A, B, C`.
+- Timing is not exact; e.g. `setTimeout(function, 1000)` is not guaranteed to execute exactly 1000ms later in terms of wall-clock time; however, it is guaranteed to execute _at least_ 1000ms later.
 - The `set*` and `clear*` functions cannot be mixed; e.g. this is incorrect:
     ```javascript
     const setTimeoutUuid = setTimeout(() => {
@@ -136,4 +146,5 @@ clearImmediate(setImmediateUuid);
     }, 4000);
     clearInterval(setTimeoutUuid); // does not work!
     ```
-- Asynchronous time is counted against Transposit operation limits; e.g. with `setTimeout(function, 10000)`, even though the function is not actively executing during the delay period, the 10000ms of delay time is still counted against the total execution time of the Transposit operation.
+- Asynchronous time is counted against [Transposit operation limits](../building/operations.md); e.g. with `setTimeout(function, 10000)`, even though the function is not actively executing during the delay period, the 10000ms of delay time is still counted against the total execution time of the Transposit operation.
+- Functions that are scheduled to run after a Transposit operation times out will not be run.
