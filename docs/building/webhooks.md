@@ -44,7 +44,7 @@ The incoming HTTP event information includes the method type, header parameters,
 
 The return value of a Transposit webhook operation must be an object containing a status code, header parameters, and a body parameter:
 
-```text
+```javascript
 function run(params) {
   var entity = {};
   entity["message"] = params.http_event.body;
@@ -79,4 +79,26 @@ Connection: keep-alive
 ```
 
 In the HTTP response, the `"Content-Type"` header will default to `"application/json"` if nothing is provided by the Transposit webhook operation, and the `"Content-Length"` header will automatically be updated to match the final HTTP response entity. The HTTP response entity will closely resemble the body value that is returned from the Transposit webhook operation, but it will not necessarily be identical due to JSON serialization/deserialization.
+
+## Returning Early
+
+It is possible to return early from a deployed webhook and execute additional work asynchronously by leveraging the timing events available in [JavaScript operations](../references/js-operations.md), e.g.
+```javascript
+function run(params) {
+  setImmediate(() => {
+    // Do work asynchronously
+  });
+
+  var entity = {};
+  entity["message"] = "Returning early!";
+  return {
+    "status_code": 200,
+    "headers": {
+      "Content-Type": "application/json",
+      ...
+    },
+    "body": entity
+  };
+}
+```
 
