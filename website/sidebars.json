@@ -26,7 +26,6 @@
       "references/keys-and-keychains",
       "references/sql-operations",
       "references/js-operations",
-      "references/js-timing-events",
       "references/js-sdk",
       "references/connect-to-jira",
       "references/google-push-notifications",
