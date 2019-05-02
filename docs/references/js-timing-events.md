@@ -59,7 +59,8 @@ Same as `setTimeout()`, but repeats the execution of the function continuously.
 
 ```javascript
 setInterval(() => {
-  api.log("This function executes roughly every 1000ms and never stops until it is cancelled");
+  api.log("This function executes roughly every 1000ms");
+  api.log("It does not stop until it is cancelled, or until the Transposit operation times out");
 }, 1000);
 // => "d705dc50-6c71-11e9-a923-1681be663d3e"
 ```
@@ -124,3 +125,15 @@ const setImmediateUuid = setImmediate(() => {
 });
 clearImmediate(setImmediateUuid);
 ```
+
+## Gotchas
+- The timing semantics of these functions do not exactly match the timing semantics of a conventional JavaScript event loop, like one in the browser.
+- Timing is not exact; e.g. `setTimeout(function, 1000)` is not guaranteed to execute exactly 1000ms later in terms of wall-clock time.
+- The `set*` and `clear*` functions cannot be mixed; e.g. this is incorrect:
+    ```javascript
+    const setTimeoutUuid = setTimeout(() => {
+      api.log("This function will not get cancelled");
+    }, 4000);
+    clearInterval(setTimeoutUuid); // does not work!
+    ```
+- Asynchronous time is counted against Transposit operation limits; e.g. with `setTimeout(function, 10000)`, even though the function is not actively executing during the delay period, the 10000ms of delay time is still counted against the total execution time of the Transposit operation.
