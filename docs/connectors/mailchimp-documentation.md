@@ -82,12 +82,6 @@ The unique id for the list.
 
 **Type:** string
 
-#### segment_id (required)
-
-The unique id for the segment.
-
-**Type:** string
-
 #### $body
 
 Assign subscribers to interests to group them together. Interests are referred to as 'group names' in the MailChimp application.
@@ -160,12 +154,6 @@ The unique id for the list.
 
 **Type:** string
 
-#### segment_id (required)
-
-The unique id for the segment.
-
-**Type:** string
-
 #### $body
 
 Individuals who are currently or have been previously subscribed to this list, including members who have bounced or unsubscribed.
@@ -207,12 +195,6 @@ Add a new merge field for a specific list.
 #### list_id (required)
 
 The unique id for the list.
-
-**Type:** string
-
-#### segment_id (required)
-
-The unique id for the segment.
 
 **Type:** string
 
@@ -328,12 +310,6 @@ The unique id for the list.
 
 **Type:** string
 
-#### segment_id (required)
-
-The unique id for the segment.
-
-**Type:** string
-
 #### $body
 
 Members to subscribe to or unsubscribe from a list.
@@ -422,12 +398,6 @@ The unique id for the list.
 
 **Type:** string
 
-#### segment_id (required)
-
-The unique id for the segment.
-
-**Type:** string
-
 #### $body
 
 Interest categories organize interests, which are used to group subscribers based on their preferences. These correspond to Group Titles the application.
@@ -462,12 +432,6 @@ The unique id for the list.
 
 **Type:** string
 
-#### segment_id (required)
-
-The unique id for the segment.
-
-**Type:** string
-
 #### subscriber_hash (required)
 
 The MD5 hash of the lowercase version of the list member's email address.
@@ -491,12 +455,6 @@ Create a new segment in a specific list.
 #### list_id (required)
 
 The unique id for the list.
-
-**Type:** string
-
-#### segment_id (required)
-
-The unique id for the segment.
 
 **Type:** string
 
@@ -562,12 +520,6 @@ The unique id for the list.
 
 **Type:** string
 
-#### segment_id (required)
-
-The unique id for the segment.
-
-**Type:** string
-
 #### $body
 
 Twitter Lead Generation Card.
@@ -588,12 +540,6 @@ The unique id for the list.
 
 **Type:** string
 
-#### segment_id (required)
-
-The unique id for the segment.
-
-**Type:** string
-
 #### $body
 
 Configure a webhook for the given list.
@@ -611,12 +557,6 @@ Customize a list's default signup form.
 #### list_id (required)
 
 The unique id for the list.
-
-**Type:** string
-
-#### segment_id (required)
-
-The unique id for the segment.
 
 **Type:** string
 
@@ -776,12 +716,6 @@ The unique id for the list.
 
 **Type:** string
 
-#### segment_id (required)
-
-The unique id for the segment.
-
-**Type:** string
-
 </details>
 
 ## delete_interests_in_category_of_list
@@ -805,12 +739,6 @@ The specific interest or 'group name'.
 #### list_id (required)
 
 The unique id for the list.
-
-**Type:** string
-
-#### segment_id (required)
-
-The unique id for the segment.
 
 **Type:** string
 
@@ -880,12 +808,6 @@ The unique id for the list.
 
 **Type:** string
 
-#### segment_id (required)
-
-The unique id for the segment.
-
-**Type:** string
-
 </details>
 
 ## delete_member_from_list
@@ -952,12 +874,6 @@ The id for the merge field.
 
 **Type:** string
 
-#### segment_id (required)
-
-The unique id for the segment.
-
-**Type:** string
-
 </details>
 
 ## delete_note_for_member_of_list
@@ -975,12 +891,6 @@ The unique id for the list.
 #### note_id (required)
 
 The id for the note.
-
-**Type:** string
-
-#### segment_id (required)
-
-The unique id for the segment.
 
 **Type:** string
 
@@ -1207,12 +1117,6 @@ The unique id for the list.
 #### report_id (required)
 
 The id for the abuse report.
-
-**Type:** string
-
-#### segment_id (required)
-
-The unique id for the segment.
 
 **Type:** string
 
@@ -1838,12 +1742,6 @@ A specific month of list growth history.
 
 **Type:** string
 
-#### segment_id (required)
-
-The unique id for the segment.
-
-**Type:** string
-
 #### exclude_fields
 
 A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation.
@@ -1867,12 +1765,6 @@ Get a month-by-month summary of a specific list's growth activity.
 #### list_id (required)
 
 The unique id for the list.
-
-**Type:** string
-
-#### segment_id (required)
-
-The unique id for the segment.
 
 **Type:** string
 
@@ -1905,12 +1797,6 @@ The unique id for the interest category.
 #### list_id (required)
 
 The unique id for the list.
-
-**Type:** string
-
-#### segment_id (required)
-
-The unique id for the segment.
 
 **Type:** string
 
@@ -1949,12 +1835,6 @@ The specific interest or 'group name'.
 #### list_id (required)
 
 The unique id for the list.
-
-**Type:** string
-
-#### segment_id (required)
-
-The unique id for the segment.
 
 **Type:** string
 
@@ -2060,12 +1940,6 @@ The unique id for the list.
 
 **Type:** string
 
-#### segment_id (required)
-
-The unique id for the segment.
-
-**Type:** string
-
 #### exclude_fields
 
 A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation.
@@ -2089,12 +1963,6 @@ Get the last 50 Goal events for a member on a specific list.
 #### list_id (required)
 
 The unique id for the list.
-
-**Type:** string
-
-#### segment_id (required)
-
-The unique id for the segment.
 
 **Type:** string
 
@@ -2168,12 +2036,6 @@ The unique id for the list.
 
 **Type:** string
 
-#### segment_id (required)
-
-The unique id for the segment.
-
-**Type:** string
-
 #### subscriber_hash (required)
 
 The MD5 hash of the lowercase version of the list member's email address.
@@ -2209,12 +2071,6 @@ The unique id for the list.
 #### merge_id (required)
 
 The id for the merge field.
-
-**Type:** string
-
-#### segment_id (required)
-
-The unique id for the segment.
 
 **Type:** string
 
@@ -2279,12 +2135,6 @@ The unique id for the list.
 #### note_id (required)
 
 The id for the note.
-
-**Type:** string
-
-#### segment_id (required)
-
-The unique id for the segment.
 
 **Type:** string
 
@@ -2656,12 +2506,6 @@ The unique id for the list.
 
 **Type:** string
 
-#### segment_id (required)
-
-The unique id for the segment.
-
-**Type:** string
-
 #### twitter_card_id (required)
 
 The unique ID for the Twitter Lead Generation Card.
@@ -2826,12 +2670,6 @@ The unique id for the list.
 
 **Type:** string
 
-#### segment_id (required)
-
-The unique id for the segment.
-
-**Type:** string
-
 #### exclude_fields
 
 A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation.
@@ -2858,12 +2696,6 @@ The unique id for the list.
 
 **Type:** string
 
-#### segment_id (required)
-
-The unique id for the segment.
-
-**Type:** string
-
 #### exclude_fields
 
 A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation.
@@ -2887,12 +2719,6 @@ Get the last 50 events of a member's activity on a specific list, including open
 #### list_id (required)
 
 The unique id for the list.
-
-**Type:** string
-
-#### segment_id (required)
-
-The unique id for the segment.
 
 **Type:** string
 
@@ -3414,12 +3240,6 @@ The unique id for the list.
 
 **Type:** string
 
-#### segment_id (required)
-
-The unique id for the segment.
-
-**Type:** string
-
 #### exclude_fields
 
 A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation.
@@ -3455,12 +3275,6 @@ The unique id for the interest category.
 #### list_id (required)
 
 The unique id for the list.
-
-**Type:** string
-
-#### segment_id (required)
-
-The unique id for the segment.
 
 **Type:** string
 
@@ -3636,12 +3450,6 @@ The unique id for the list.
 
 **Type:** string
 
-#### segment_id (required)
-
-The unique id for the segment.
-
-**Type:** string
-
 #### before_last_changed
 
 Restrict results to subscribers whose information changed before the set timeframe.
@@ -3768,12 +3576,6 @@ The unique id for the list.
 
 **Type:** string
 
-#### segment_id (required)
-
-The unique id for the segment.
-
-**Type:** string
-
 #### exclude_fields
 
 A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation.
@@ -3855,12 +3657,6 @@ Get recent notes for a specific list member.
 #### list_id (required)
 
 The unique id for the list.
-
-**Type:** string
-
-#### segment_id (required)
-
-The unique id for the segment.
 
 **Type:** string
 
@@ -4060,12 +3856,6 @@ The unique id for the list.
 
 **Type:** string
 
-#### segment_id (required)
-
-The unique id for the segment.
-
-**Type:** string
-
 #### before_created_at
 
 Restrict results to segments created before the set time.
@@ -4119,12 +3909,6 @@ Get signup forms for a specific list.
 #### list_id (required)
 
 The unique id for the list.
-
-**Type:** string
-
-#### segment_id (required)
-
-The unique id for the segment.
 
 **Type:** string
 
@@ -4258,12 +4042,6 @@ The unique id for the list.
 
 **Type:** string
 
-#### segment_id (required)
-
-The unique id for the segment.
-
-**Type:** string
-
 #### exclude_fields
 
 A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation.
@@ -4313,12 +4091,6 @@ Get information about all Twitter Lead Generation Cards for a specific list.
 #### list_id (required)
 
 The unique id for the list.
-
-**Type:** string
-
-#### segment_id (required)
-
-The unique id for the segment.
 
 **Type:** string
 
@@ -4631,18 +4403,6 @@ A comma-separated list of fields to exclude. Reference parameters of sub-objects
 A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation.
 
 **Type:** array
-
-#### snip_end
-
-To have the match highlighted with something (like a strong HTML tag), both this and `snip_start` must be passed. This parameter has a 25-character limit.
-
-**Type:** string
-
-#### snip_start
-
-To have the match highlighted with something (like a strong HTML tag), both this and `snip_end` must be passed. This parameter has a 25-character limit.
-
-**Type:** string
 
 </details>
 
@@ -4966,12 +4726,6 @@ The unique id for the list.
 
 **Type:** string
 
-#### segment_id (required)
-
-The unique id for the segment.
-
-**Type:** string
-
 #### $body
 
 Interest categories organize interests, which are used to group subscribers based on their preferences. These correspond to Group Titles the application.
@@ -5001,12 +4755,6 @@ The specific interest or 'group name'.
 #### list_id (required)
 
 The unique id for the list.
-
-**Type:** string
-
-#### segment_id (required)
-
-The unique id for the segment.
 
 **Type:** string
 
@@ -5094,12 +4842,6 @@ The unique id for the list.
 
 **Type:** string
 
-#### segment_id (required)
-
-The unique id for the segment.
-
-**Type:** string
-
 #### $body
 
 Information about a specific list.
@@ -5117,12 +4859,6 @@ Add or update a list member.
 #### list_id (required)
 
 The unique id for the list.
-
-**Type:** string
-
-#### segment_id (required)
-
-The unique id for the segment.
 
 **Type:** string
 
@@ -5158,12 +4894,6 @@ The id for the merge field.
 
 **Type:** string
 
-#### segment_id (required)
-
-The unique id for the segment.
-
-**Type:** string
-
 #### $body
 
 A merge field (formerly merge vars) for a specific list. These correspond to merge fields in MailChimp's lists and subscriber profiles.
@@ -5187,12 +4917,6 @@ The unique id for the list.
 #### note_id (required)
 
 The id for the note.
-
-**Type:** string
-
-#### segment_id (required)
-
-The unique id for the segment.
 
 **Type:** string
 
@@ -5389,12 +5113,6 @@ Update the settings for an existing webhook.
 #### list_id (required)
 
 The unique id for the list.
-
-**Type:** string
-
-#### segment_id (required)
-
-The unique id for the segment.
 
 **Type:** string
 
