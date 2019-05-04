@@ -481,7 +481,7 @@ The maximum number of attendees to include in the response. If there are more th
 
 #### orderBy
 
-The order of the events returned in the result. Optional. The default is an unspecified, stable order. Note that if you want to order by startTime, you must also set the parameter "singleEvents" to true
+The order of the events returned in the result. Optional. The default is an unspecified, stable order.
 
 **Type:** string
 
